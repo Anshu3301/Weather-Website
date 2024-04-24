@@ -1,0 +1,323 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+main{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to bottom right, rgb(32 30 30 / 93%), rgb(29 46 133 / 94%));
+}
+
+#viewport_top_portion{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 5vh;
+}
+
+#left_sidebar{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 45vh;
+    width: 15vw;
+    border-radius: 1vh;
+    background-color: rgba(77, 225, 225, 0.847);
+}
+
+#input_n_search{
+    height: 15%;
+    width: 100%;
+    padding: 1vh 0.3vw 0 0.4vw;
+}
+
+input{
+    height: 100%;
+    width: 85%;
+    border-radius:1vh ;
+    border: none;
+    cursor: text;
+} 
+
+button{
+    height: 100%;
+    width: 10%;
+    position: relative;
+    right: 0.2vw;
+    cursor: pointer;
+}
+
+#after_search{
+    height: 72%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(50, 203, 50, 0.596);
+}
+
+#today{
+   position: relative;
+   top: 6.5vh;
+   left: 0.5vw;
+}
+
+#livelogo_temp{
+   display: flex;
+   justify-content: space-around; 
+   align-items: center;
+   position: relative;
+   top: 4.5vh;
+   /* bottom: 1.5vh; */
+}
+
+#live_weather_logo{
+    position: relative;
+    bottom: 3vh;
+} 
+
+.temp_deg{
+    position: relative;
+    right: 1.9vw;
+    bottom: 5.7vh; 
+}
+
+#temp{
+   position: relative;
+   /* top: 4.7vh;
+   right: 2vw; */
+}
+
+#weather_description_text{
+  position: relative;
+  bottom: 9vh;
+  display: flex;
+  justify-content: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#location_calender{
+    height: 30%;
+    width: 100%;
+    padding-left: 0.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgba(139, 0, 139, 0.719); 
+}
+
+#right_top_outer{
+   height: 45vh;
+   width: 75vw;
+   border-radius: 1vh;
+   background-color: rgba(137, 43, 226, 0.68);
+}
+
+#right_top_inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 38vh;
+    width: 75vw;
+    border-radius: 1vh;
+    background-color: rgba(165, 42, 42, 0.621);
+}
+
+#right_top_inner1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* align-items: center; */
+    height: 95%;
+    width: 35%;
+    border-radius: 1vh;
+    position: relative;
+    left: 2vw;
+    background-color: rgba(208, 93, 51, 0.838);
+}
+
+#sunrise_sunset{
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#max_min_temp{
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#humidity_windspeed_live{
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#uv_visibility{
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    background-color: rgba(0, 0, 0, 0.4);
+}
+#right_top_inner2{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-around;
+    align-items: center;
+    height: 95%;
+    width: 55%;
+    border-radius: 1vh;
+    position: relative;
+    right: 2vw;
+    background-color: rgba(84, 185, 218, 0.838);
+}
+
+#right_top_inner2_aqi{
+    height: 85%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1vh;
+    position: relative;
+    background-color: rgba(36, 166, 209, 0.838); 
+}
+
+/* #air_pressure{
+    position: relative;
+    right: 5vw;
+} */
+
+#right_top_inner2_pollutants{
+    height: 95%;
+    width: 50%;
+    border-radius: 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: relative; */
+    background-color: rgba(209, 36, 117, 0.838); 
+}
+
+#pollutant_inner_last{
+    height: 95%;
+    width: 100%;
+    /* background-color: rgba(48, 34, 113, 0.58); */
+}
+
+#pollutant_heading{
+    /* padding-left: 0.6vw; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15%;
+    width: 100%;
+    /* background-color: rgba(0, 0, 0, 0.548); */
+}
+
+#conc_heading{
+    position: relative;
+    bottom: 0.8vh;
+}
+
+#unit_of_conc{
+    position: relative;
+    left: 83.4vw;
+    bottom: 76.5vh;
+}
+
+.elements{
+    height: 12%;
+    width: 95%;
+    margin-top: 0.5vh;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    left: 0.5vw;
+    /* background-color:rgba(0, 0, 0, 0.548) ; */
+}
+
+.o3_conc{
+    position: relative;
+    left: 0.2vw;
+}
+
+.no2_conc{
+    position: relative;
+    right: 0.1vw;
+}
+
+.pm_conc{
+    position: relative;
+    right: 0.5vw;
+}
+
+
+ #right_bottom_outer{
+    height: 45vh;
+    width: 75vw;
+    border-radius: 1vh;
+    background-color: rgba(137, 43, 226, 0.68);
+    position: relative;
+    left: 22.5vw;
+    top: 7vh;
+}
+
+#forecast_by_day{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    background-color: rgba(220, 86, 29, 0.783);
+    
+}
+
+.forecast{
+    height: 80% ;
+    width: 15%;
+    border-radius: 1vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:wheat ;
+}
+
+ .logo_temp_description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+    background-color: rgba(40, 41, 41, 0.541);
+}
+
+.logo_temp{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 40%;
+    width: 100%;
+    position: relative;
+    /* background-color: rgba(40, 41, 41, 0.661); */
+}
+
+ #windspeed_forecast{
+    position: relative;
+    top:4.5vh;
+    right: 3vw;
+}
+
+#humidity_forecast{
+    position: relative;
+    left: 3.5vw;
+} 
