@@ -273,5 +273,3 @@ getTime("kolkata");
 getWeatherByLocation("kolkata");
 getWeatherForecast("kolkata");
 getWeatherForecast2("kolkata");
-
-
