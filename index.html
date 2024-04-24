@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="website icon" type="png" href="silver-weather-icon-free-png.png">
+</head>
+
+<body>   
+    
+<main> 
+    <div id="viewport_top_portion">
+        <div id="left_sidebar">
+            <form id="input_n_search">
+                <input id="input" class="form-control me-2" type="search" placeholder=" Search By Location"  aria-label="Search">
+                <button class="btn btn-outline-success" type="submit" id="submit"><i class="fa-solid fa-magnifying-glass fa-xl"></i></button>
+            </form>  
+            <div id="after_search">
+                 <h2 id="today"><span id="day_of_week"></span></h2>
+                 <br><br>
+                  <div id="livelogo_temp">
+                      <h2 style="font-size: 70px;"><span id="live_weather_logo"></span></h2>
+                      <h2 class="temp_deg" style="font-size: 35px;"><span id="temp" style="font-size: 40px;"></span>&#xb0;C</h2>
+                  </div>   
+                 <h2 id="description_text"><span id="weather_description_text"></span></h2>
+                 <!-- <h4 id="" style="text-align: center;">Feels like: 35&#xb0;C</h4> -->
+
+
+                
+            </div>
+         <hr>   
+            <div id="location_calender">
+                <h4 style="font-size: 20px;"> <i class="fa-solid fa-location-dot"></i> <span id="cityName"></span>, <span id="country"></span> </h4>
+                <h5> <i class="fa-regular fa-calendar fa-xl"> </i> <b style="font-size: 15px;"><span id="day"></span>-<span id="month"></span>-<span id="year"></span>, <span id="hour"></span>:<span id="minute"></span> </b> </h5>
+            </div>
+        </div>
+        
+        
+
+      <div id="right_top_outer">
+         <ul style="padding: 2vh 0 0 2.5vw;"> <h2> <li>Today's Highlight:</li> </h2> </ul>
+
+          <div id="right_top_inner">
+              <div id="right_top_inner1">
+                  <div id="sunrise_sunset" style="font-size: 18px;">
+                       <h3>Sunrise:<span id="sunrise"></span></h3>
+                       <h3>Sunset:<span id="sunset"></span></h3>
+                  </div>
+                  <div id="max_min_temp">
+                       <h3 style="font-size: 19px;">Min Temp:<span id="temp_min"></span>&#xb0;C </h3>
+                       <h3 style="font-size: 19px;">Max Temp:<span id="temp_max"></span>&#xb0;C</h3>
+                  </div>
+                  <div id="humidity_windspeed_live" style="font-size: 20px;">
+                     <div id="windspeed_live">
+                         <h5> <i class="fa-solid fa-wind"></i> <span id="windspeed"></span> Km/H </h5>
+                         <h5> Wind Speed </h5>
+                     </div>
+                     <div id="humidity_live">
+                         <h5> <i class="fa-solid fa-droplet"></i>  <span id="humidity"></span>%</h5>
+                         <h5> Humidity </h5>
+                     </div>
+                  </div>
+                  <div id="uv_visibility" style="font-size: 20px;">
+                     <div id="visibility_live"> 
+                         <h5> <i class="fa-solid fa-eye"></i> <span id="visibility"></span> Km</h5>
+                         <h5 style="text-align:center;">Max. Visibility</h5>
+                     </div>
+                     <div id="pressure">    
+                         <h5> <i class="fa fa-tachometer" aria-hidden="true"></i> <span id="air_pressure"></span> hPa</h5>
+                         <h5 style="text-align:center;">Air Pressure</h5>
+                     </div>
+                 </div>
+              </div>
+
+               <div id="right_top_inner2">
+                  <div id="right_top_inner2_aqi" style="font-size: 18px;">
+                       <h2 style="font-size: 58px;"><span id="overall_aqi"></span></h2>
+                       <h3> AQI </h3>
+                       <h3>(Average)</h3>
+                  </div>
+                  <div id="right_top_inner2_pollutants">
+                        <div id="pollutant_inner_last">
+                            <div id="pollutant_heading">
+                           <h3>Pollutant</h3>
+                           <h3 id="conc_heading">Concentration</h3>
+                           <h3>AQI</h3>
+                        </div>
+                        <!-- <h5 id="unit_of_conc"> (&#181;g/m<sup>3</sup>)</h5>    -->
+                        <hr>
+                        <div class="elements">
+                            <H4>SO<sub>2</sub></H4>     
+                            <H4><span id="so2"></span></H4>
+                            <H4><span id="so2_aqi"></span></H4>
+                        </div>
+                        <hr>
+                        <div class="elements">
+                            <H4>CO</H4>
+                            <H4><span id="co"></span></H4>
+                            <H4><span id="co_aqi"></span></H4>
+                        </div>
+                        <hr>
+                        <div class="elements">
+                            <H4>O<sub>3</sub></H4>
+                            <H4 class="o3_conc"><span id="o3"></span></H4>
+                            <H4><span id="o3_aqi"></span></H5>
+                        </div>
+                        <hr>
+                        <div class="elements">
+                            <H4>NO<sub>2</sub></H4>
+                            <H4 class="no2_conc"><span id="no2"></span></H4>
+                            <H4><span id="no2_aqi"></span></H4>
+                        </div>
+                        <hr>
+                        <div class="elements">
+                            <H4>PM2.5</H4>
+                            <H4 class="pm_conc"><span id="pm25"></span></H4>
+                            <H4><span id="pm25_aqi"></span></H4>
+                        </div>
+                        <hr>
+                        <div class="elements">
+                            <H4>PM10</H4>
+                            <H4 class="pm_conc"><span id="pm10"></span></H4>
+                            <H4><span id="pm10_aqi"></span></H4>
+                        </div>
+                    </div> 
+                  </div> 
+                </div>
+            </div> 
+      </div>
+    </div>
+
+    <br>
+
+    <div id="right_bottom_outer">
+      <ul style="padding: 2.9vh 0 0 2.5vw;"> <h2> <li>5 Days Forecast:</li> </h2> </ul>
+        <div id="forecast_by_day">
+               <div class="forecast" id="day1">
+                        <h3><span id="day1_weekday"></span></h3>
+                        <h4><span id="day1_date"></span></h4>
+                        <div class="logo_temp_description"> 
+                              <div class="logo_temp">
+                                  <h2><span id="day1_logo"></span></h2>
+                                  <h2><span id="day1_temp"></span>&#xb0;C </h2>
+                              </div> 
+                             <h4><span id="day1_description"></span></h4>                                 <!-- day1 -->
+                        </div>
+                        <div id="windspeed_forecast">
+                            <h5> <i class="fa-solid fa-wind"></i><span id="day1_windspeed"></span>Km/H </h5>
+                            <h5> Wind Speed </h5>
+                        </div>
+                        <div id="humidity_forecast">
+                            <h5> <i class="fa-solid fa-droplet"></i><span id="day1_humidity"></span>% </h5>
+                            <h5> Humidity </h5>
+                        </div>
+               </div>
+
+
+            <div class="forecast" id="day2">
+                <h3><span id="day2_weekday"></span></h3>
+                <h4><span id="day2_date"></span></h4>
+                <div class="logo_temp_description"> 
+                      <div class="logo_temp">
+                          <h2><span id="day2_logo"></span></h2>
+                          <h2><span id="day2_temp"></span>&#xb0;C </h2>
+                      </div>                                                          <!-- day 2 -->
+                     <h4><span id="day2_description"></span></h4>
+                </div>
+                <div id="windspeed_forecast">
+                    <h5> <i class="fa-solid fa-wind"></i><span id="day2_windspeed"></span>Km/H </h5>
+                    <h5> Wind Speed </h5>
+                </div>
+                <div id="humidity_forecast">
+                    <h5> <i class="fa-solid fa-droplet"></i><span id="day2_humidity"></span>%</h5>
+                    <h5> Humidity </h5>
+                </div>
+            </div>
+
+
+            <div class="forecast" id="day3">
+                <h3><span id="day3_weekday"></span></h3>
+                <h4><span id="day3_date"></span></h4>
+                <div class="logo_temp_description"> 
+                      <div class="logo_temp">
+                          <h2><span id="day3_logo"></span></h2>
+                          <h2><span id="day3_temp"></span>&#xb0;C </h2>
+                      </div>                                                          <!-- day 3 -->
+                     <h4><span id="day3_description"></span></h4>
+                </div>
+                <div id="windspeed_forecast">
+                    <h5> <i class="fa-solid fa-wind"></i><span id="day3_windspeed"></span>Km/H </h5>
+                    <h5> Wind Speed </h5>
+                </div>
+                <div id="humidity_forecast">
+                    <h5> <i class="fa-solid fa-droplet"></i><span id="day3_humidity"></span>%</h5>
+                    <h5> Humidity </h5>
+                </div>
+            </div>
+
+
+            <div class="forecast" id="day4">
+                <h3><span id="day4_weekday"></span></h3>
+                <h4><span id="day4_date"></span></h4>
+                <div class="logo_temp_description"> 
+                      <div class="logo_temp">
+                          <h2><span id="day4_logo"></span></h2>
+                          <h2><span id="day4_temp"></span>&#xb0;C </h2>
+                      </div>                                                          <!-- day 4 -->
+                     <h4><span id="day4_description"></span></h4>
+                </div>
+                <div id="windspeed_forecast">
+                    <h5> <i class="fa-solid fa-wind"></i><span id="day4_windspeed"></span>Km/H </h5>
+                    <h5> Wind Speed </h5>
+                </div>
+                <div id="humidity_forecast">
+                    <h5> <i class="fa-solid fa-droplet"></i><span id="day4_humidity"></span>% </h5>
+                    <h5> Humidity </h5>
+                </div>
+            </div>
+
+
+            <div class="forecast" id="day5">
+                <h3><span id="day5_weekday"></span></h3>
+                <h4><span id="day5_date"></span></h4>
+                <div class="logo_temp_description"> 
+                      <div class="logo_temp">
+                          <h2><span id="day5_logo"></span></h2>
+                          <h2><span id="day5_temp"></span>&#xb0;C </h2>
+                      </div>                                                          <!-- day 5 -->
+                     <h4><span id="day5_description"></span></h4>
+                </div>
+                <div id="windspeed_forecast">
+                    <h5> <i class="fa-solid fa-wind"></i><span id="day5_windspeed"></span>Km/H </h5>
+                    <h5> Wind Speed </h5>
+                </div>
+                <div id="humidity_forecast">
+                    <h5> <i class="fa-solid fa-droplet"></i><span id="day5_humidity"></span>% </h5>
+                    <h5> Humidity </h5>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    
+    <h5 id="unit_of_conc"> (&#181;g/m<sup>3</sup>)</h5>       <!-- unit of concentration -->
+
+
+</main>   
+
+<script src="https://kit.fontawesome.com/466c081ab2.js" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>
