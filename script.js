@@ -89,7 +89,6 @@ const getAirQuality = (input)=>{
         .then((response) => response.json()) // converting in JSON & returning
         .then((response) => {
     
-    
             // console.log(response);
              
              so2.innerHTML = response.SO2.concentration;
